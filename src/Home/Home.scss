@@ -1,13 +1,26 @@
 @font-face {
   font-family: 'Akzidenz-Light-Condensed';
-  src: url('../assets/fonts/akzidenzgroteskpro-lightcn-webfont.eot'); /* IE9 Compat Modes */
-  src: url('../assets/fonts/akzidenzgroteskpro-lightcn-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../assets/fonts/akzidenzgroteskpro-lightcn-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../assets/fonts/akzidenzgroteskpro-lightcn-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../assets/fonts/akzidenzgroteskpro-lightcn-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../assets/fonts/akzidenzgroteskpro-lightcn-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  src: url('/fonts/akzidenzgroteskpro-lightcn-webfont.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/akzidenzgroteskpro-lightcn-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/akzidenzgroteskpro-lightcn-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/akzidenzgroteskpro-lightcn-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/fonts/akzidenzgroteskpro-lightcn-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/akzidenzgroteskpro-lightcn-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
+@font-face {
+  font-family: 'HelveticaNeue-BlackCond';
+  src: url('/fonts/HelveticaNeueBlackCond.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/HelveticaNeueBlackCond.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/HelveticaNeueBlackCond.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/HelveticaNeueBlackCond.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/fonts/HelveticaNeueBlackCond.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/HelveticaNeueBlackCond.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+/*
+ * Element styles
+ */
 body {
   margin: 0;
   padding: 0;
@@ -16,6 +29,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
   color: white;
+  min-width: 320px;
 }
 
 button, a {
@@ -37,11 +51,21 @@ button {
   background: transparent;
 }
 
-/* Generic section styles */
+/*
+ * Generic section styles 
+ */
 .Home > div {
   padding: 5em 0 0;
   overflow: auto;
   position: relative;
+
+  @media only screen and (max-width: 960px) {
+    padding: 3em 0 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 1.5em 0 0;
+  }
 
   h2 {
     font-size: 3em;
@@ -49,6 +73,13 @@ button {
     text-transform: uppercase;
     text-align: center;
     margin-top: 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+    h2 {
+      font-size: 2.2em;
+      margin-bottom: .5em;
+    }
   }
 
   p {
@@ -76,15 +107,31 @@ button {
   }
 }
 
-/* Hero section styles */
+/* 
+ * Hero section styles 
+ */
 .Home .Hero {
   padding-top: 0;
+
+  @media only screen and (max-width: 768px) {
+    min-height: 450px;
+    overflow: hidden;
+  }
 
   .background {
     position: relative;
     z-index: 0;
     width: 100%;
     opacity: .66;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .background {
+      position: absolute;
+      width: 768px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   > div {
@@ -104,7 +151,7 @@ button {
       width: 330px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-evenly;
 
       li {
         list-style: none;
@@ -112,6 +159,10 @@ button {
         button {
           font-size: 1.5em;
           position: relative;
+
+          @media only screen and (max-width: 420px) {
+            font-size: 1em;
+          }
           
           &:after {    
             background: none repeat scroll 0 0 transparent;
@@ -141,19 +192,37 @@ button {
     transform: translate(-50%, -50%);
     text-align: center;
 
+    @media only screen and (max-width: 420px) {
+      width: 100%;
+    }
+
     .logo {
       margin-left: 15px;
     }
 
     h1 {
       font-size: 3em;
-      font-family:  "HelveticaNeue BlackCond";
+      font-family:  "HelveticaNeue-BlackCond";
       text-transform: uppercase;
       margin: 10px 0 -8px;
     }
 
     span {
       font-size: 2.5em;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .logo {
+        width: 100px;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      span {
+        font-size: 1.5em;
+      }
     }
   }
 
@@ -187,36 +256,66 @@ button {
   }
 }
 
-/* About Us section styles */
+/* 
+ * About Us section styles 
+*/
 .Home .AboutUs {
-  p, .img-wrap {
-    padding: 0 2em;
-    box-sizing: border-box;
+  .content, .description {
+    overflow: auto;
+    position: relative;
   }
 
-  p {
-    padding-right: 1.5em;
-  }
+  .content {
+    p, .img-wrap {
+      padding: 0 2em;
+      box-sizing: border-box;
+    }
 
-  .img-wrap {
-    padding-left: 1.5em;
-
-    img {
+    p {
+      padding-right: 1.5em;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       width: 100%;
+      box-sizing: border-box;
+    }
+
+    .img-wrap {
+      padding-left: 1.5em;
+
+      img {
+        width: 100%;
+      }
     }
   }
 
   @media only screen and (min-width: 960px) {
-    p, .img-wrap {
-      float: left;
-      width: 50%;
+    .content {
+      display: flex;
+
+      > * {
+        width: 50%;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 960px) {
+    .content {
+      > .description > p {
+        position: relative;
+        top: initial;
+        left: initial;
+        transform: initial;
+        margin-bottom: 2em;
+      }
     }
   }
 
   .blurb {
     position: relative;
     clear: both;
-    padding-top: 6em;
+    margin-top: 6em;
     overflow: hidden;
 
     img {
@@ -234,6 +333,10 @@ button {
       width: 70%;
       z-index: 1;
     }
+
+    @media only screen and (max-width: 960px) {
+      display: none;
+    }
   }
 }
 
@@ -246,10 +349,26 @@ button {
     margin: 0 auto;
   }
 
+  @media only screen and (max-width: 768px) {
+    p {
+      font-size: 1.5em;
+    }
+  }
+
   .input-container {
     overflow: auto;
     width: 50%;
     margin: 0 auto;
+  }
+
+  @media only screen and (max-width: 1280px) {
+    p {
+      width: 70%;
+    }
+
+    .input-container {
+      width: 80%;
+    }
   }
 
   .input-container > input {
@@ -264,6 +383,15 @@ button {
     border: none;
     border: 2px solid transparent;
     outline: none;
+
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+      margin: 0 0 1em;
+
+      &:first-child {
+        margin-top: 1em;
+      }
+    }
 
     &:nth-child(2) {
       margin-left: 1%;
@@ -346,6 +474,9 @@ button {
   }
 }
 
+/*
+ * Footer styles
+ */
 .Home .Footer {
   padding-bottom: 2em;
 
@@ -353,20 +484,50 @@ button {
     display: flex;
     justify-content: space-evenly;
 
+    @media only screen and (max-width: 768px) {
+      display: block;
+
+      > div {
+        text-align: center;
+        margin-top: 1.5em;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+
     h3 {
       font-size: 3em;
       font-weight: normal;
       margin: 0 0 20px;
     }
 
+    @media only screen and (max-width: 768px) {
+      h3 {
+        font-size: 2em;
+        margin-bottom: 5px;
+      }
+    }
+
     span {
       display: block;
       font-size: 2em;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      span {
+        font-size: 1.5em;
+      }
     }
   }
 
   .copyright {
     margin-top: 5em;
+
+    @media only screen and (max-width: 786px) {
+      margin-top: 2.2em;
+    }
 
     p {
       font-size: 1em !important;

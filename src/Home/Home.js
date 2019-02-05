@@ -108,9 +108,13 @@ class Home extends React.Component {
         }
         <div className='AboutUs' id='aboutus' ref={this.aboutUs}>
           <h2>About Us</h2>
-          <p>JPG Exhaust is a locally owned muffler shop in Oakville. We opened our first and only location in 1997 and plan to stay a local muffler shop. We did this so that we can maintain our quality of customer service and low prices. We’ll always do our best to go above and beyond. And you’ll never get any surprise charges. We are upfront about our prices and we are confident that you won’t find anything lower.</p>
-          <div className='img-wrap'>
-            <img src={JPGCrew} alt='JPG Exhaust employees' />
+          <div className='content'>
+            <div className='description'>
+              <p>JPG Exhaust is a locally owned muffler shop in Oakville. We opened our first and only location in 1997 and plan to stay a local muffler shop. We did this so that we can maintain our quality of customer service and low prices. We’ll always do our best to go above and beyond. And you’ll never get any surprise charges. We are upfront about our prices and we are confident that you won’t find anything lower.</p>
+            </div>
+            <div className='img-wrap'>
+              <img src={JPGCrew} alt='JPG Exhaust employees' />
+            </div>
           </div>
           <div className='blurb'>
             <p>
@@ -182,6 +186,7 @@ class Home extends React.Component {
             <div>
               <h3>Hours</h3>
               <span>Monday to Friday 8:30am - 5:30pm</span>
+              <span>Saturday 8:30am - Noon</span>
             </div>
           </div>
           <div className='copyright'>
