@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.scss';
 import HeroBG from './hero-bg.jpg';
 import Logo from './exhaust-icon.png';
-import { MdKeyboardArrowDown } from 'react-icons/md';
+import { MdKeyboardArrowDown, MdClose } from 'react-icons/md';
 import JPGCrew from './jpg-crew.jpg';
 import BigMufflerBG from './big-muffler-bg.jpg';
 import Popup from './Popup';
@@ -22,6 +22,15 @@ class Home extends React.Component {
       emailValid: undefined,
       emailSent: false,
       popupIsOpen: false,
+      infoMessageClosed: false,
+      openSaturdays: true,
+    }
+  }
+  componentWillMount() {
+    const date = new Date();
+    const month = date.getMonth();
+    if (month > 5 && month < 9) {
+      this.setState({ openSaturdays: false })
     }
   }
   scrollToSection = (currentRef) => {
@@ -72,9 +81,23 @@ class Home extends React.Component {
       popupIsOpen: false,
     });
   }
+  closeInfoMessage = () => {
+    this.setState({ infoMessageClosed: true });
+    // document.cookie = 'closedInfoMessage20190626=true;max-age=' + (60*60*24*30);
+  }
   render() {
     return (
       <div className='Home' ref={this.home}>
+        {
+          !this.state.infoMessageClosed && (
+            <div onClick={this.closeInfoMessage} className='info-message'>
+              JPG Exhaust will be closed all Saturdays starting July 6th, 2019 until August 31, 2019. We will be open on Saturdays again starting September 7, 2019.
+              <button className='close'>
+                <MdClose />
+              </button>
+            </div>
+          )
+        }
         {
           /* Hero */
         }
@@ -186,7 +209,12 @@ class Home extends React.Component {
             <div>
               <h3>Hours</h3>
               <span>Monday to Friday 8:30am - 5:30pm</span>
-              <span>Saturday 8:30am - Noon</span>
+              {
+                this.state.openSaturdays && <span>Saturday 8:30am - Noon</span>
+              }
+              {
+                !this.state.openSaturdays && <span>Closed Saturday</span>
+              }
             </div>
           </div>
           <div className='copyright'>
