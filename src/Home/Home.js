@@ -83,12 +83,11 @@ class Home extends React.Component {
   }
   closeInfoMessage = () => {
     this.setState({ infoMessageClosed: true });
-    // document.cookie = 'closedInfoMessage20190626=true;max-age=' + (60*60*24*30);
   }
   render() {
     return (
       <div className='Home' ref={this.home}>
-        {
+        {/* {
           !this.state.infoMessageClosed && (
             <div onClick={this.closeInfoMessage} className='info-message'>
               JPG Exhaust will be closed all Saturdays starting July 6th, 2019 until August 31, 2019. We will be open on Saturdays again starting September 7, 2019.
@@ -97,7 +96,7 @@ class Home extends React.Component {
               </button>
             </div>
           )
-        }
+        } */}
         {
           /* Hero */
         }
@@ -209,12 +208,7 @@ class Home extends React.Component {
             <div>
               <h3>Hours</h3>
               <span>Monday to Friday 8:30am - 5:30pm</span>
-              {
-                this.state.openSaturdays && <span>Saturday 8:30am - Noon</span>
-              }
-              {
-                !this.state.openSaturdays && <span>Closed Saturday</span>
-              }
+              <span>Saturday 8:30am - Noon</span>
             </div>
           </div>
           <div className='copyright'>
