@@ -58,7 +58,7 @@ class Home extends React.Component {
   sendEmail = () => {
     if (!this.state.emailValid) return false;
 
-    let url = new URL('http://www.jpgexhaust.com/quote.php');
+    let url = new URL('http://jpgexhaust.com/quote.php');
     const params = {
       name: this.state.quoteFormName,
       email: this.state.quoteFormEmail,
