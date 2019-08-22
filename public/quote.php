@@ -1,8 +1,8 @@
 <?php 
   header("Access-Control-Allow-Origin: *");
   $url = "http://$_SERVER[REQUEST_URI]";
-  $parts = parse_url($url);
-  parse_str($parts['query'], $query);
+  $parts = $_SERVER['QUERY_STRING'];
+  parse_str($parts, $query);
 
   $to = "info@jpgexhaust.com"; 
   $name = $query['name'];
