@@ -1,6 +1,6 @@
 <?php 
   header("Access-Control-Allow-Origin: *");
-  $url = "http://$_SERVER[REQUEST_URI]";
+  $url = "https://$_SERVER[REQUEST_URI]";
   $parts = $_SERVER['QUERY_STRING'];
   parse_str($parts, $query);
 

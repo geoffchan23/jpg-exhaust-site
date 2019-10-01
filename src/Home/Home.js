@@ -58,7 +58,7 @@ class Home extends React.Component {
   sendEmail = () => {
     if (!this.state.emailValid) return false;
 
-    let url = new URL('http://jpgexhaust.com/quote.php');
+    let url = new URL('https://jpgexhaust.com/quote.php');
     const params = {
       name: this.state.quoteFormName,
       email: this.state.quoteFormEmail,
@@ -213,7 +213,7 @@ class Home extends React.Component {
           </div>
           <div className='copyright'>
             <p>© 1997-2019 JPG Exhaust Inc.</p>
-            <p>Website lovingly designed/developed by <a href='http://www.geoffreychan.com/' title='Geoff Chan website' target='_'>Geoff Chan</a></p>
+            <p>Website lovingly designed/developed by <a href='https://www.geoffreychan.com/' title='Geoff Chan website' target='_'>Geoff Chan</a></p>
           </div>
         </div>
       </div>
