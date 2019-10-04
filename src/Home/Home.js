@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import './Home.scss';
 import HeroBG from './hero-bg.jpg';
 import Logo from './exhaust-icon.png';
@@ -58,14 +59,22 @@ class Home extends React.Component {
   sendEmail = () => {
     if (!this.state.emailValid) return false;
 
-    let url = new URL('https://www.jpgexhaust.com/quote.php');
+    let url = 'https://api.emailjs.com/api/v1.0/email/send';
+    
     const params = {
       name: this.state.quoteFormName,
       email: this.state.quoteFormEmail,
       message: this.state.quoteFormMessage,
     }
-    url.search = new URLSearchParams(params);
-    fetch(url);
+
+    const data = {
+      service_id: 'mailgun',
+      template_id: 'jpg_quotes',
+      user_id: 'user_f2gjJL54RwbaztEGui1T9',
+      template_params: params,
+    }
+
+    axios.post(url, data);
 
     this.setState({
       emailSent: true,
