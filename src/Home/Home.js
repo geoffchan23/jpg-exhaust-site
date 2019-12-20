@@ -96,16 +96,16 @@ class Home extends React.Component {
   render() {
     return (
       <div className='Home' ref={this.home}>
-        {/* {
+        {
           !this.state.infoMessageClosed && (
             <div onClick={this.closeInfoMessage} className='info-message'>
-              JPG Exhaust will be closed all Saturdays starting July 6th, 2019 until August 31, 2019. We will be open on Saturdays again starting September 7, 2019.
+              JPG Exhaust will be closed for the holidays starting December 21, 2019 until January 2, 2020.
               <button className='close'>
                 <MdClose />
               </button>
             </div>
           )
-        } */}
+        }
         {
           /* Hero */
         }
