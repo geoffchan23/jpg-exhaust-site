@@ -96,7 +96,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className='Home' ref={this.home}>
-        {
+        {/* {
           !this.state.infoMessageClosed && (
             <div onClick={this.closeInfoMessage} className='info-message'>
               JPG Exhaust will be closed for the holidays starting December 21, 2019 until January 2, 2020.
@@ -105,7 +105,7 @@ class Home extends React.Component {
               </button>
             </div>
           )
-        }
+        } */}
         {
           /* Hero */
         }
