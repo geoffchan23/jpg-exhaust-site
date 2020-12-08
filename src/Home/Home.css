@@ -1,0 +1,501 @@
+@font-face {
+  font-family: "Akzidenz-Light-Condensed";
+  src: url("~/fonts/akzidenzgroteskpro-lightcn-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("~/fonts/akzidenzgroteskpro-lightcn-webfont.eot?#iefix") format("embedded-opentype"), url("~/fonts/akzidenzgroteskpro-lightcn-webfont.woff2") format("woff2"), url("~/fonts/akzidenzgroteskpro-lightcn-webfont.woff") format("woff"), url("~/fonts/akzidenzgroteskpro-lightcn-webfont.ttf") format("truetype"), url("~/fonts/akzidenzgroteskpro-lightcn-webfont.svg#svgFontName") format("svg");
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: "HelveticaNeue-BlackCond";
+  src: url("~/fonts/HelveticaNeueBlackCond.eot");
+  /* IE9 Compat Modes */
+  src: url("~/fonts/HelveticaNeueBlackCond.eot?#iefix") format("embedded-opentype"), url("~/fonts/HelveticaNeueBlackCond.woff2") format("woff2"), url("~/fonts/HelveticaNeueBlackCond.woff") format("woff"), url("~/fonts/HelveticaNeueBlackCond.ttf") format("truetype"), url("~/fonts/HelveticaNeueBlackCond.svg#svgFontName") format("svg");
+  /* Legacy iOS */
+}
+/*
+ * Element styles
+ */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Akzidenz-Light-Condensed", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color: white;
+  min-width: 320px;
+}
+
+button, a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.5s opacity;
+  font-family: "Akzidenz-Light-Condensed", "Helvetica Neue", sans-serif;
+  outline: none;
+}
+button:hover, a:hover {
+  opacity: 1;
+}
+
+button {
+  border: none;
+  background: transparent;
+}
+
+/*
+ * Generic section styles 
+ */
+.Home > div {
+  padding: 5em 0 0;
+  overflow: auto;
+  position: relative;
+}
+@media only screen and (max-width: 960px) {
+  .Home > div {
+    padding: 3em 0 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .Home > div {
+    padding: 1.5em 0 0;
+  }
+}
+.Home > div h2 {
+  font-size: 3em;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+}
+@media only screen and (max-width: 768px) {
+  .Home > div h2 {
+    font-size: 2.2em;
+    margin-bottom: 0.5em;
+  }
+}
+.Home > div p {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 0;
+}
+@media only screen and (min-width: 960px) {
+  .Home > div p {
+    font-size: 1.63em;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .Home > div p {
+    font-size: 2.3em;
+  }
+}
+@media only screen and (min-width: 1605px) {
+  .Home > div p {
+    font-size: 2.6em;
+  }
+}
+
+/*
+ * Info Message
+ */
+.Home .info-message {
+  padding: 20px 3em;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 24px;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  background-color: steelblue;
+}
+.Home .info-message .close {
+  content: "x";
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  line-height: 28px;
+}
+
+/* 
+ * Hero section styles 
+ */
+.Home .Hero {
+  padding-top: 0;
+}
+@media only screen and (max-width: 768px) {
+  .Home .Hero {
+    min-height: 450px;
+    overflow: hidden;
+  }
+}
+.Home .Hero .background {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  opacity: 0.66;
+}
+@media only screen and (max-width: 768px) {
+  .Home .Hero .background {
+    position: absolute;
+    width: 768px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.Home .Hero > div {
+  position: absolute;
+  z-index: 1;
+}
+.Home .Hero .links {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.Home .Hero .links ul {
+  margin: 0 auto;
+  padding: 2em 0;
+  width: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.Home .Hero .links ul li {
+  list-style: none;
+}
+.Home .Hero .links ul li button {
+  font-size: 1.5em;
+  position: relative;
+}
+@media only screen and (max-width: 420px) {
+  .Home .Hero .links ul li button {
+    font-size: 1em;
+  }
+}
+.Home .Hero .links ul li button:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: -2px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.Home .Hero .links ul li button:hover:after {
+  width: 100%;
+  left: 0;
+}
+.Home .Hero .content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+@media only screen and (max-width: 420px) {
+  .Home .Hero .content {
+    width: 100%;
+  }
+}
+.Home .Hero .content .logo {
+  margin-left: 15px;
+}
+.Home .Hero .content h1 {
+  font-size: 3em;
+  font-family: "HelveticaNeue-BlackCond";
+  text-transform: uppercase;
+  margin: 10px 0 -8px;
+}
+.Home .Hero .content span {
+  font-size: 2.5em;
+}
+@media only screen and (max-width: 768px) {
+  .Home .Hero .content .logo {
+    width: 100px;
+  }
+  .Home .Hero .content h1 {
+    font-size: 2em;
+  }
+  .Home .Hero .content span {
+    font-size: 1.5em;
+  }
+}
+.Home .Hero .get-a-quote-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 3em;
+  transform: translateX(-50%);
+  font-size: 1.5em;
+}
+.Home .Hero .get-a-quote-btn svg {
+  fill: white;
+  position: absolute;
+  bottom: -1.75em;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 50px;
+  height: 50px;
+  animation: bounce 1.75s infinite ease-in-out;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 15px);
+  }
+}
+
+/* 
+ * About Us section styles 
+*/
+.Home .AboutUs .content, .Home .AboutUs .description {
+  overflow: auto;
+  position: relative;
+}
+.Home .AboutUs .content p, .Home .AboutUs .content .img-wrap {
+  padding: 0 2em;
+  box-sizing: border-box;
+}
+.Home .AboutUs .content p {
+  padding-right: 1.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  box-sizing: border-box;
+}
+.Home .AboutUs .content .img-wrap {
+  padding-left: 1.5em;
+}
+.Home .AboutUs .content .img-wrap img {
+  width: 100%;
+}
+@media only screen and (min-width: 960px) {
+  .Home .AboutUs .content {
+    display: flex;
+  }
+  .Home .AboutUs .content > * {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .Home .AboutUs .content > .description > p {
+    position: relative;
+    top: initial;
+    left: initial;
+    transform: initial;
+    margin-bottom: 2em;
+  }
+}
+.Home .AboutUs .blurb {
+  position: relative;
+  clear: both;
+  margin-top: 6em;
+  overflow: hidden;
+}
+.Home .AboutUs .blurb img {
+  width: 100%;
+  opacity: 0.7;
+}
+.Home .AboutUs .blurb p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5em;
+  text-shadow: 2px 2px 9px rgba(0, 0, 0, 0.8);
+  width: 70%;
+  z-index: 1;
+}
+@media only screen and (max-width: 960px) {
+  .Home .AboutUs .blurb {
+    display: none;
+  }
+}
+
+.Home .GetAQuote {
+  padding-bottom: 5em;
+}
+.Home .GetAQuote p {
+  font-size: 2em;
+  width: 40%;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 768px) {
+  .Home .GetAQuote p {
+    font-size: 1.5em;
+  }
+}
+.Home .GetAQuote .input-container {
+  overflow: auto;
+  width: 50%;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1280px) {
+  .Home .GetAQuote p {
+    width: 70%;
+  }
+  .Home .GetAQuote .input-container {
+    width: 80%;
+  }
+}
+.Home .GetAQuote .input-container > input {
+  width: 49%;
+  float: left;
+  margin: 20px 1% 20px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: "Akzidenz-Light-Condensed", "Helvetica Neue", sans-serif;
+  font-size: 1.5em;
+  border-radius: 5px;
+  border: none;
+  border: 2px solid transparent;
+  outline: none;
+}
+@media only screen and (max-width: 768px) {
+  .Home .GetAQuote .input-container > input {
+    width: 100%;
+    margin: 0 0 1em;
+  }
+  .Home .GetAQuote .input-container > input:first-child {
+    margin-top: 1em;
+  }
+}
+.Home .GetAQuote .input-container > input:nth-child(2) {
+  margin-left: 1%;
+  margin-right: 0;
+  float: right;
+}
+.Home .GetAQuote .input-container > input.invalid {
+  border: 2px solid #800000;
+  box-sizing: border-box;
+}
+.Home .GetAQuote textarea {
+  padding: 10px;
+  font-family: "Akzidenz-Light-Condensed", "Helvetica Neue", sans-serif;
+  font-size: 1.5em;
+  width: 100%;
+  height: 150px;
+  margin: 0 auto;
+  display: block;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: none;
+  resize: none;
+}
+.Home .GetAQuote .submit {
+  padding: 10px 4em;
+  margin: 20px auto;
+  clear: both;
+  display: block;
+  background-color: #39AEFC;
+  color: white;
+  font-size: 1.75em;
+  font-family: "Akzidenz-Light-Condensed", "Helvetica Neue", sans-serif;
+  border-radius: 50px;
+}
+.Home .GetAQuote .submit:disabled {
+  opacity: 0.7 !important;
+  cursor: auto;
+  background-color: gray;
+}
+
+.ReactModal__Content button {
+  color: gray;
+  font-size: 1em;
+  border: 1px solid gray;
+  padding: 10px 2em;
+  border-radius: 2em;
+  transition: 0.5s opacity, 0.5s background-color, 0.5s color;
+}
+.ReactModal__Content button:hover {
+  background-color: gray;
+  color: white;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.Home .Map {
+  padding: 0;
+}
+.Home .Map iframe {
+  width: 100%;
+  height: 500px;
+}
+
+/*
+ * Footer styles
+ */
+.Home .Footer {
+  padding-bottom: 2em;
+}
+.Home .Footer .tile-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+@media only screen and (max-width: 768px) {
+  .Home .Footer .tile-container {
+    display: block;
+  }
+  .Home .Footer .tile-container > div {
+    text-align: center;
+    margin-top: 1.5em;
+  }
+  .Home .Footer .tile-container > div:first-child {
+    margin-top: 0;
+  }
+}
+.Home .Footer .tile-container h3 {
+  font-size: 3em;
+  font-weight: normal;
+  margin: 0 0 20px;
+}
+@media only screen and (max-width: 768px) {
+  .Home .Footer .tile-container h3 {
+    font-size: 2em;
+    margin-bottom: 5px;
+  }
+}
+.Home .Footer .tile-container span {
+  display: block;
+  font-size: 2em;
+}
+@media only screen and (max-width: 1000px) {
+  .Home .Footer .tile-container span {
+    font-size: 1.5em;
+  }
+}
+.Home .Footer .copyright {
+  margin-top: 5em;
+}
+@media only screen and (max-width: 786px) {
+  .Home .Footer .copyright {
+    margin-top: 2.2em;
+  }
+}
+.Home .Footer .copyright p {
+  font-size: 1em !important;
+}
