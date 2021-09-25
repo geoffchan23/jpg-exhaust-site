@@ -96,9 +96,11 @@ class Home extends React.Component {
   render() {
     return (
       <div className='Home' ref={this.home}>
+        {/*
         <div className='info-message' style={{ backgroundColor: '#ef820d', fontWeight: 'bold' }}>
           Starting Monday January 25th JPG Exhaust will only be open until 4:30pm Monday to Friday. Please call <a href="tel:905-339-0317" style={{ textDecoration: 'underline', opacity: 1 }}>905-339-0317</a> to book an appointment.
         </div>
+        */}
         {/* {
           !this.state.infoMessageClosed && (
             <div onClick={this.closeInfoMessage} className='info-message'>
@@ -219,8 +221,8 @@ class Home extends React.Component {
             </div>
             <div>
               <h3>Hours</h3>
-              <span>Monday to Friday 8:30am - 5:30pm</span>
-              <span>Saturday 8:30am - Noon</span>
+              <span>Monday to Friday 8:30am - 5:00pm</span>
+              <span>Saturday by appointment 8:30am - Noon</span>
             </div>
           </div>
           <div className='copyright'>
