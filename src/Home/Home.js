@@ -222,7 +222,7 @@ class Home extends React.Component {
             <div>
               <h3>Hours</h3>
               <span>Monday to Friday 8:30am - 5:00pm</span>
-              <span>Saturday by appointment 8:30am - Noon</span>
+              <span>Saturday and Sunday Closed</span>
             </div>
           </div>
           <div className='copyright'>
