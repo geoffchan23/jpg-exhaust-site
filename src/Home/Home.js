@@ -104,7 +104,7 @@ class Home extends React.Component {
         {
           !this.state.infoMessageClosed && (
             <div onClick={this.closeInfoMessage} className='info-message'>
-              JPG Exhaust will not be accepting Saturday appoints for the summer. Saturday appoints will resume after Labour Day, September 5, 2022.
+              JPG Exhaust will be closed from December 23, 2022 until January 2, 2023.
               <button className='close'>
                 <MdClose />
               </button>
