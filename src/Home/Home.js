@@ -104,7 +104,7 @@ class Home extends React.Component {
         {
           !this.state.infoMessageClosed && (
             <div onClick={this.closeInfoMessage} className='info-message'>
-              JPG Exhaust will be closed from December 22, 2023 until January 1, 2024.
+              JPG Exhaust will be closed from December 23, 2024 until January 1, 2025.
               <button className='close'>
                 <MdClose />
               </button>
