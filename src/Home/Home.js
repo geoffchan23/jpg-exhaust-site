@@ -4,7 +4,7 @@ import './Home.css';
 import HeroBG from './hero-bg.jpg';
 import Logo from './exhaust-icon.png';
 import { MdKeyboardArrowDown, MdClose } from 'react-icons/md';
-import JPGCrew from './jpg-crew.jpg';
+import JPGCrew from './jpg-team.jpg';
 import BigMufflerBG from './big-muffler-bg.jpg';
 import Popup from './Popup';
 
