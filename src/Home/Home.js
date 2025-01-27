@@ -101,16 +101,16 @@ class Home extends React.Component {
            Starting Monday January 25th JPG Exhaust will only be open until 4:30pm Monday to Friday. Please call <a href="tel:905-339-0317" style={{ textDecoration: 'underline', opacity: 1 }}>905-339-0317</a> to book an appointment.
         </div>
         */}
-        {
-          !this.state.infoMessageClosed && (
-            <div onClick={this.closeInfoMessage} className='info-message'>
-              JPG Exhaust will be closed from December 23, 2024 until January 1, 2025.
-              <button className='close'>
-                <MdClose />
-              </button>
-            </div>
-          )
-        }
+        // {
+        //   !this.state.infoMessageClosed && (
+        //     <div onClick={this.closeInfoMessage} className='info-message'>
+        //       JPG Exhaust will be closed from December 23, 2024 until January 1, 2025.
+        //       <button className='close'>
+        //         <MdClose />
+        //       </button>
+        //     </div>
+        //   )
+        // }
         {
           /* Hero */
         }
@@ -222,7 +222,8 @@ class Home extends React.Component {
             <div>
               <h3>Hours</h3>
               <span>Monday to Friday 8:30am - 5:00pm</span>
-              <span>Saturday and Sunday Closed</span>
+              <span>Saturday 8:30am - 12:00pm</span>
+              <span>Sunday Closed</span>
             </div>
           </div>
           <div className='copyright'>
