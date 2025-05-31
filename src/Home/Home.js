@@ -227,7 +227,7 @@ class Home extends React.Component {
             </div>
           </div>
           <div className='copyright'>
-            <p>© 1997-2019 JPG Exhaust Inc.</p>
+            <p>© 1997-2025 JPG Exhaust Inc.</p>
             <p>Website lovingly designed/developed by <a href='https://www.geoffreychan.com/' title='Geoff Chan website' target='_'>Geoff Chan</a></p>
           </div>
         </div>
