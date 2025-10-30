@@ -230,7 +230,7 @@ class Home extends React.Component {
           <div className='copyright'>
             <p>© 1997-2025 JPG Exhaust Inc.</p>
             <p>Website created by <a href='https://www.geoffreychan.com/' title='Geoff Chan website' target='_'>Geoff Chan</a></p>
-            <p><Link to='/privacy-policy'>Privacy Policy</Link></p>
+            <p><Link to='/privacy'>Privacy Policy</Link></p>
           </div>
         </div>
       </div>
