@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import './Home.css';
 import HeroBG from './hero-bg.jpg';
 import Logo from './exhaust-icon.png';
@@ -228,7 +229,8 @@ class Home extends React.Component {
           </div>
           <div className='copyright'>
             <p>© 1997-2025 JPG Exhaust Inc.</p>
-            <p>Website lovingly designed/developed by <a href='https://www.geoffreychan.com/' title='Geoff Chan website' target='_'>Geoff Chan</a></p>
+            <p>Website created by <a href='https://www.geoffreychan.com/' title='Geoff Chan website' target='_'>Geoff Chan</a></p>
+            <p><Link to='/privacy-policy'>Privacy Policy</Link></p>
           </div>
         </div>
       </div>

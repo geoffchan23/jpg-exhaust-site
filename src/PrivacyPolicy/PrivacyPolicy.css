@@ -1,0 +1,130 @@
+.PrivacyPolicy {
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4em 2em;
+  box-sizing: border-box;
+}
+
+.PrivacyPolicy .content {
+  max-width: 900px;
+  width: 100%;
+  font-family: "Akzidenz-Light-Condensed", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+}
+
+.PrivacyPolicy .back-link {
+  display: inline-block;
+  margin-bottom: 2em;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: white;
+  opacity: 0.7;
+  transition: 0.3s opacity;
+}
+
+.PrivacyPolicy .back-link:hover {
+  opacity: 1;
+}
+
+.PrivacyPolicy h1 {
+  font-size: 2.5em;
+  font-weight: normal;
+  margin: 0 0 0.5em 0;
+  text-align: center;
+}
+
+.PrivacyPolicy .effective-date {
+  text-align: center;
+  font-size: 1.1em;
+  opacity: 0.7;
+  margin-bottom: 2em;
+}
+
+.PrivacyPolicy .intro {
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 3em;
+}
+
+.PrivacyPolicy section {
+  margin-bottom: 2.5em;
+}
+
+.PrivacyPolicy h2 {
+  font-size: 1.8em;
+  font-weight: normal;
+  margin: 0 0 0.8em 0;
+}
+
+.PrivacyPolicy p {
+  font-size: 1.1em;
+  margin: 0 0 1em 0;
+}
+
+.PrivacyPolicy ul {
+  font-size: 1.1em;
+  margin: 0 0 1em 0;
+  padding-left: 2em;
+}
+
+.PrivacyPolicy li {
+  margin-bottom: 0.5em;
+}
+
+.PrivacyPolicy a {
+  color: white;
+  text-decoration: underline;
+  opacity: 0.7;
+  transition: 0.3s opacity;
+}
+
+.PrivacyPolicy a:hover {
+  opacity: 1;
+}
+
+.PrivacyPolicy .contact-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1.5em;
+  border-radius: 5px;
+  margin: 1.5em 0;
+}
+
+.PrivacyPolicy .contact-box p {
+  margin: 0.3em 0;
+}
+
+.PrivacyPolicy .policy-footer {
+  text-align: center;
+  margin-top: 4em;
+  padding-top: 2em;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.PrivacyPolicy .policy-footer p {
+  font-size: 0.9em;
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 768px) {
+  .PrivacyPolicy {
+    padding: 2em 1.5em;
+  }
+
+  .PrivacyPolicy h1 {
+    font-size: 1.8em;
+  }
+
+  .PrivacyPolicy h2 {
+    font-size: 1.5em;
+  }
+
+  .PrivacyPolicy p,
+  .PrivacyPolicy ul,
+  .PrivacyPolicy li {
+    font-size: 1em;
+  }
+}
