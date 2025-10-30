@@ -51,24 +51,25 @@ class PrivacyPolicy extends React.Component {
 
         <section>
           <h2>2. What personal information we collect</h2>
-          <p>When you use our Voice Agent, we only collect the following directly-identifiable personal information:</p>
+          <p>When you use our Voice Agent, we may collect the following personal information:</p>
           <ul>
-            <li>Your first name</li>
+            <li>Your name</li>
             <li>Your telephone number</li>
-            <li>The model (make/model) of your vehicle</li>
+            <li>Vehicle information (such as make, model, year, or other details you provide)</li>
+            <li>Any other information you voluntarily provide during the call</li>
           </ul>
-          <p>In addition, we collect meta-data about the call including:</p>
+          <p>In addition, we collect call-related information including:</p>
           <ul>
             <li>Date and time of the call</li>
             <li>Duration of the call</li>
             <li>Whether you spoke to the Voice Agent or the call was forwarded to a human representative</li>
-            <li>If you spoke to the Voice Agent and provided input: the transcript of your interaction with the Voice Agent</li>
+            <li>If you spoke to the Voice Agent: the transcript of your interaction with the Voice Agent</li>
           </ul>
           <p>
             If you are transferred to a human representative, and you do not speak to the Voice Agent, we collect only the date/time of call, duration and the fact of transfer.
           </p>
           <p>
-            We do not collect more sensitive personal information (such as financial information, health information, or explicit location data beyond what you voluntarily provide) through the Voice Agent.
+            We do not intentionally collect sensitive personal information (such as financial information or health information) through the Voice Agent. However, if you voluntarily provide such information during your call, it may be recorded in the transcript.
           </p>
         </section>
 
@@ -95,7 +96,7 @@ class PrivacyPolicy extends React.Component {
             By interacting with the Voice Agent and providing your information, you are consenting to our collection, use and disclosure of your information as set out in this policy.
           </p>
           <p>
-            If you decline to provide the required information (first name, phone number, vehicle model), we may be unable to fulfil your service booking request through the automated system, and may transfer you to a human representative instead.
+            If you decline to provide the requested information, we may be unable to fulfil your service booking request through the automated system, and may transfer you to a human representative instead.
           </p>
           <p>
             If you do not want your transcript to be retained, you may ask us to delete it (see section 7 "Your rights").
@@ -112,9 +113,9 @@ class PrivacyPolicy extends React.Component {
           </p>
           <p>In particular:</p>
           <ul>
-            <li>Call meta-data (date/time, duration, transfer flag) is retained for 12 months for service-improvement and audit-purposes.</li>
+            <li>Call meta-data (date/time, duration, transfer flag) is retained for 12 months for service-improvement and audit purposes.</li>
             <li>Transcripts are retained for 12 months, after which they are deleted or anonymized.</li>
-            <li>Direct personal identifiers (first name, phone number, vehicle model) are retained only as long as required for scheduling, notification and follow-up; thereafter they are archived or destroyed.</li>
+            <li>Personal information (name, phone number, vehicle information) is retained only as long as required for scheduling, notification and follow-up; thereafter it is archived or destroyed.</li>
           </ul>
           <p>
             You can request the retention periods by contacting us (see section 7).
