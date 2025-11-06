@@ -146,7 +146,7 @@ class PrivacyPolicy extends React.Component {
             <p><strong>Privacy Officer</strong></p>
             <p>Philip Chan</p>
             <p>JPG Exhaust Inc.</p>
-            <p>1015 Industry Street, Oakville ON L6K 2G1</p>
+            <p>1015 Industry Street, Oakville ON L6J 2X3</p>
             <p>Email: <a href='mailto:info@jpgexhaust.com'>info@jpgexhaust.com</a></p>
             <p>Phone: <a href='tel:905-339-0317'>905-339-0317</a></p>
           </div>
