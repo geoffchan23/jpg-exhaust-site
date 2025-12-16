@@ -14,8 +14,7 @@ class Home extends React.Component {
     super();
     this.home = React.createRef();
     this.aboutUs = React.createRef();
-    this.bookAppointment = React.createRef();
-    this.map = React.createRef();
+    this.getAQuote = React.createRef();
     this.contactUs = React.createRef();
 
     this.state = {
@@ -95,16 +94,6 @@ class Home extends React.Component {
   closeInfoMessage = () => {
     this.setState({ infoMessageClosed: true });
   }
-  openBookingWidget = () => {
-    // Find and click the Shift booking widget button (inside Shadow DOM)
-    const host = document.querySelector('#shift-booking-widget-host');
-    if (host && host.shadowRoot) {
-      const shiftButton = host.shadowRoot.querySelector('button');
-      if (shiftButton) {
-        shiftButton.click();
-      }
-    }
-  }
   render() {
     return (
       <div className='Home' ref={this.home}>
@@ -134,7 +123,7 @@ class Home extends React.Component {
                 <button onClick={() => this.scrollToSection(this.aboutUs)}>ABOUT US</button>
               </li>
               <li>
-                <button onClick={this.openBookingWidget}>GET A QUOTE</button>
+                <button onClick={() => this.scrollToSection(this.getAQuote)}>GET A QUOTE</button>
               </li>
               <li>
                 <button onClick={() => this.scrollToSection(this.contactUs)}>CONTACT</button>
@@ -146,8 +135,8 @@ class Home extends React.Component {
             <h1>JPG Exhaust</h1>
             <span>all of your exhaust needs</span>
           </div>
-          <button onClick={() => this.scrollToSection(this.map)} className='get-a-quote-btn'>
-            FIND US
+          <button onClick={() => this.scrollToSection(this.getAQuote)} className='get-a-quote-btn'>
+            GET A QUOTE
             <MdKeyboardArrowDown />
           </button>
         </div>
@@ -172,21 +161,42 @@ class Home extends React.Component {
           </div>
         </div>
         {
-          /* Book Appointment  */
+          /* Get A Quote  */
         }
-        <div className='GetAQuote' ref={this.bookAppointment}>
-          <h2>BOOK AN APPOINTMENT</h2>
-          <p>Ready to get your exhaust serviced? Book an appointment online and we'll see you soon.</p>
+        <div className='GetAQuote' ref={this.getAQuote}>
+          <h2>GET A QUOTE</h2>
+          <p>Need a quote or have a question? Send us a message and we'll be glad to get back to you via text or email.</p>
           <div className='input-container'>
-            <button className='submit' onClick={this.openBookingWidget}>
-              Book an Appointment
+            <input
+              placeholder='Name' 
+              value={this.state.quoteFormName} 
+              onChange={this.updateName} 
+            />
+            <input 
+              placeholder='Email' 
+              value={this.state.quoteFormEmail} 
+              onChange={this.updateEmail} 
+              onBlur={(e) => this.checkEmailValid(e.target.value)}
+              className={'email' + (this.state.emailValid === false ? ' invalid' : '')}
+            />
+            <textarea 
+              placeholder='Question' 
+              value={this.state.quoteFormMessage} 
+              onChange={this.updateMessage}
+            />
+            <button className='submit' onClick={this.sendEmail} disabled={!this.state.emailValid}>
+              Send Message
             </button>
           </div>
+          <Popup
+            popupIsOpen={this.state.popupIsOpen}
+            closePopup={this.closePopup}
+          />
         </div>
         {
           /* Map */
         }
-        <div className='Map' ref={this.map}>
+        <div className='Map'>
           <iframe 
             title='google map'
             src="https://maps.google.com/maps?q=jpg%20exhaust%20oakville&t=&z=13&ie=UTF8&iwloc=&output=embed" 
