@@ -5,7 +5,7 @@ import './Home.css';
 import HeroBG from './hero-bg.jpg';
 import Logo from './exhaust-icon.png';
 import { MdKeyboardArrowDown, MdClose } from 'react-icons/md';
-import JPGCrew from './jpg-team.jpg';
+import JPGCrew from './jpg-crew-2026.png';
 import BigMufflerBG from './big-muffler-bg.jpg';
 import Popup from './Popup';
 
@@ -105,7 +105,7 @@ class Home extends React.Component {
         {
           !this.state.infoMessageClosed && (
             <div onClick={this.closeInfoMessage} className='info-message'>
-              JPG Exhaust will be closed from December 24, 2025 until January 4th, 2026.
+              Enjoying our service? <a href="https://g.page/r/CehmlEFlP4CpEBM/review" target="_blank" rel="noopener noreferrer">Leave us a review on Google!</a>
               <button className='close'>
                 <MdClose />
               </button>
