@@ -105,7 +105,7 @@ class Home extends React.Component {
         {
           !this.state.infoMessageClosed && (
             <div className='info-message'>
-              Enjoying our service? <a href="https://g.page/r/CehmlEFlP4CpEBM/review" target="_blank" rel="noopener noreferrer">Leave us a review on Google!</a>
+              Enjoying our service? <a href="https://g.page/r/CehmlEFlP4CpEBM/review" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Leave us a review on Google!</a>
               <button className='close' onClick={this.closeInfoMessage}>
                 <MdClose />
               </button>
