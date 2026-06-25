@@ -104,8 +104,8 @@ class Home extends React.Component {
         */}
         {
           !this.state.infoMessageClosed && (
-            <div className='info-message'>
-              Enjoying our service? <a href="https://g.page/r/CehmlEFlP4CpEBM/review" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Leave us a review on Google!</a>
+            <div className='info-message' style={{ backgroundColor: '#ef820d', fontWeight: 'bold' }}>
+              📍 We're moving! As of July 10th, 2026 our new location is 1200 South Service Road West, Unit #1, Oakville ON L6L 5T7.
               <button className='close' onClick={this.closeInfoMessage}>
                 <MdClose />
               </button>
@@ -218,7 +218,7 @@ class Home extends React.Component {
             </div>
             <div>
               <h3>Address</h3>
-              <span>1015 Industry Street, Oakville ON L6K 2G1</span>
+              <span>1200 South Service Road West, Unit #1, Oakville ON L6L 5T7</span>
             </div>
             <div>
               <h3>Hours</h3>
