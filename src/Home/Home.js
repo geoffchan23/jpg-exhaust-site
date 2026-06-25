@@ -105,7 +105,7 @@ class Home extends React.Component {
         {
           !this.state.infoMessageClosed && (
             <div className='info-message' style={{ backgroundColor: '#ef820d', fontWeight: 'bold' }}>
-              📍 We're moving! As of July 10th, 2026 our new location is 1200 South Service Road West, Unit #1, Oakville ON L6L 5T7.
+              📍 We're moving! As of July 17th, 2026 our new location is 1200 South Service Road West, Unit #1, Oakville ON L6L 5T7.
               <button className='close' onClick={this.closeInfoMessage}>
                 <MdClose />
               </button>
